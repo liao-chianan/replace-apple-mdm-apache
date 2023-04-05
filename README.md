@@ -38,7 +38,7 @@ Step5.一樣打開終端機，用curl檢查是否已經替換成最新版
           
 # 參考資料與為什麼要如此修改
 
-參考文件：
+參考文件：  
 https://superuser.com/questions/801724/os-x-server-websites-interfering-with-default-apache  
 https://wpbeaches.com/installing-configuring-apache-on-macos-using-homebrew/  
 https://www.devxperiences.com/pzwp1/2021/01/05/install-update-apache-httpd-2-4-462-on-mac-mojave/  
