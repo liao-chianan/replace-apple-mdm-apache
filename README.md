@@ -61,6 +61,8 @@ mdm是透過serveradmin start devicemgr啟動，然後再去com.apple.servicepro
 透過grep "bin/httpd" /Applications/Server.app/* -R，找到幾個主要的設定檔案並且修改  
 sed -i "" 's#/usr/sbin/httpd#/usr/local/bin/httpd#g'  /Applications/Server.app/Contents/ServerRoot/usr/sbin/httpd-server-wrapper  
 sed -i "" 's#HTTPD_PATH="/usr/sbin/httpd"#HTTPD_PATH="/usr/local/bin/httpd#g' /Applications/Server.app/Contents/ServerRoot/usr/sbin/serviceproxyctl  
+
+載入的模組也要換到正確的新版路徑
 sed -i "" 's#libexec/apache2#/usr/local/opt/apache2/lib/httpd/modules#g' /Library/Server/Web/Config/Proxy/apache_serviceproxy.conf  
   
 再次啟動會發現錯誤訊息，少了apple hfs模組，新的apache也無法加上LegacyCertChainVerify這個參數  
@@ -71,3 +73,6 @@ sed -i "" 's#+LegacyCertChainVerify##g' /Library/Server/Web/Config/apache2/httpd
 
 重新啟動apache，測試結果就正常嘍  
 
+# 後記  
+經測試mdm server若不開外網連線、只留內網連線的情形下也能夠正常運作與佈署app，只是差別在於設備拿到外部網路環境時就無法派送，  
+大多數設備應會以內網使用為主，所以若只需要在內網部署與派送設備，也可以直接考慮關閉mdm server的外網連線，就不須進行上面的更新步驟了。
