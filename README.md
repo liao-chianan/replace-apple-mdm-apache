@@ -15,7 +15,7 @@ MacOS server 5.12.2
 # 步驟 
 Step1. 登入系統，打開終端機  
   
-Step2. 複製貼上以下指令 (安裝HomeBrew以及apache，過程中會詢問sudo密碼)  
+Step2. 安裝HomeBrew以及apache (過程中會詢問sudo密碼)  
   
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" && brew install apache-httpd  
 
