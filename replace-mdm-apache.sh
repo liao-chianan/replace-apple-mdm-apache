@@ -6,3 +6,6 @@ sed -i "" 's#libexec/apache2#/usr/local/opt/apache2/lib/httpd/modules#g' /Librar
 #using old hfs module and remove the parameter LegacyCertChainVerify  
 cp /usr/libexec/apache2/mod_hfs_apple.so /usr/local/opt/apache2/lib/httpd/modules/  
 sed -i "" 's#+LegacyCertChainVerify##g' /Library/Server/Web/Config/apache2/httpd_devicemanagement_ssl.conf  
+
+#Bigsur issue, no mime file
+test -f /usr/local/etc/httpd/mime.types || cp -r /usr/local/opt/httpd/.bottle/etc/httpd/ /usr/local/etc/httpd
