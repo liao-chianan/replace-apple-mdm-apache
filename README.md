@@ -6,7 +6,7 @@ Apple mdm server buildin apache(2.4.54) is outdated,replace with brew apache(2.4
 # 已測試系統環境
 Environment x86  
 MacOS Monterey 12.6.3 + MacOS server 5.12.2  
-MacOS Monterey 12.6.4 + MacOS Server 5.12.2
+MacOS Monterey 12.6.4 + MacOS Server 5.12.2  
 MacOS Bigsur 11.6 + MacOS server 5.11  
 
   
