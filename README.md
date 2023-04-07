@@ -6,7 +6,9 @@ Apple mdm server buildin apache(2.4.54) is outdated,replace with brew apache(2.4
 # 已測試系統環境
 Environment x86  
 MacOS Monterey 12.6.3 + MacOS server 5.12.2  
-MacOS Bigsur 11.6 + MacOS server 5.11
+MacOS Monterey 12.6.4 + MacOS Server 5.12.2
+MacOS Bigsur 11.6 + MacOS server 5.11  
+
   
 # !!!!本過程未經完整驗證與測試，不保證在任何平台皆能成功!!!!  
  !!!!請務必有MacOS的完整備份再進行以下動作，確保失誤時能夠還原!!!!  
@@ -40,8 +42,8 @@ Step6.一樣打開終端機，用curl檢查是否已經替換成最新版
         
           
           
-# 參考資料與修改歷程
-
+# 參考資料與修改歷程  
+  
 參考文件：  
 https://superuser.com/questions/801724/os-x-server-websites-interfering-with-default-apache  
 https://wpbeaches.com/installing-configuring-apache-on-macos-using-homebrew/  
@@ -57,7 +59,7 @@ https://serverfault.com/questions/446132/os-x-server-how-where-is-the-server-app
 brew install apache-httpd  
   
   
-安裝完畢後，mdm server仍然會是舊版本2.4.54 
+安裝完畢後，mdm server仍然會是舊版本2.4.54  
 ps -awx|grep httpd發現啟動路徑不對  
 mdm是透過serveradmin start devicemgr啟動，然後再去com.apple.serviceproxy呼叫/usr/sbin/httpd  
 但是Homebrew安裝的是 /usr/local/bin/httpd，所以要針對相關設定檔案修正  
@@ -83,4 +85,4 @@ test -f /usr/local/etc/httpd/mime.types || cp -r /usr/local/opt/httpd/.bottle/et
   
 # 後記  
 經測試mdm server若不開外網連線、只留內網連線的情形下也能夠正常運作與佈署app，只是差別在於設備拿到外部網路環境時就無法派送，  
-大多數設備應會以內網使用為主，所以若只需要在內網部署與派送設備，也可以直接考慮關閉mdm server的外網連線，就不須進行上面的更新步驟了。
+大多數設備應會以內網使用為主，所以若只需要在內網部署與派送設備避免資安警訊，也可以直接考慮關閉mdm server的外網連線，就不一定要進行上面的更新步驟了。
