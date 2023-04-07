@@ -1,12 +1,12 @@
 
 
 # 取代mdm內建的apache，改成brew的最新版
-Apple mdm server buildin apache(2.4.54) is outdated,replace with brew apache(2.4.56)
+Apple mdm server buildin apache(2.4.54) is outdated,replace with brew apache(2.4.56 or later)
   
 # 已測試系統環境
 Environment x86  
 MacOS Monterey 12.6.3 + MacOS server 5.12.2  
-MacOS Monterey 12.6.4 + MacOS Server 5.12.2  
+MacOS Monterey 12.6.4 + MacOS Server 5.12.2 + apache 2.4.56/2.4.57  
 MacOS Bigsur 11.6 + MacOS server 5.11  
 MacOS Bigsur 11.2.2 + MacOS server 5.11  
   
