@@ -78,7 +78,7 @@ sed -i "" 's#libexec/apache2#/usr/local/opt/apache2/lib/httpd/modules#g' /Librar
 cp /usr/libexec/apache2/mod_hfs_apple.so /usr/local/opt/apache2/lib/httpd/modules/  
 sed -i "" 's#+LegacyCertChainVerify##g' /Library/Server/Web/Config/apache2/httpd_devicemanagement_ssl.conf  
     
-測試另一台Bigsur環境需缺了httpd的設定檔目錄，所以補一行  
+測試另一台Bigsur環境還缺了httpd的設定檔目錄，所以補一行  
 test -f /usr/local/etc/httpd/mime.types || cp -r /usr/local/opt/httpd/.bottle/etc/httpd/ /usr/local/etc/httpd  
   
 重新啟動apache，測試結果就正常嘍  
