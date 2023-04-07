@@ -6,6 +6,7 @@ Apple mdm server buildin apache(2.4.54) is outdated,replace with brew apache(2.4
 # 已測試系統環境
 Environment x86  
 MacOS Monterey 12.6.3 + MacOS server 5.12.2  
+(upgrade to 12.6.4 and apache 2.4.57 is fine, redo step4 step5 needed)  
 MacOS Monterey 12.6.4 + MacOS Server 5.12.2 + apache 2.4.56/2.4.57  
 MacOS Bigsur 11.6 + MacOS server 5.11  
 MacOS Bigsur 11.2.2 + MacOS server 5.11  
@@ -13,6 +14,9 @@ MacOS Bigsur 11.2.2 + MacOS server 5.11
 # !!!!本過程未經完整驗證與測試，不保證在任何平台皆能成功!!!!  
  !!!!請務必有MacOS的完整備份再進行以下動作，確保失誤時能夠還原!!!!  
   
+# !!!!安裝後遇到MacOS系統升級注意事項!!!!  
+ 如已經安裝成功，但後續又進行了MacOs的系統升級(像是12.6.3升級到12.6.4)，更新完進系統再次開啟Server App時，
+ MacOS又會把apache的設定變成預設值，導致mdm服務失效，此時再次執行Step4修改設定並進行Step5重開機即可。     
 
 # 步驟 
 Step1. 登入系統，打開終端機  
