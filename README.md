@@ -8,7 +8,7 @@ Environment x86
 MacOS Monterey 12.6.3 + MacOS server 5.12.2  
 MacOS Monterey 12.6.4 + MacOS Server 5.12.2  
 MacOS Bigsur 11.6 + MacOS server 5.11  
-
+MacOS Bigsur 11.2.2 + MacOS server 5.11  
   
 # !!!!本過程未經完整驗證與測試，不保證在任何平台皆能成功!!!!  
  !!!!請務必有MacOS的完整備份再進行以下動作，確保失誤時能夠還原!!!!  
